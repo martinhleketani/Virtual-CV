@@ -45,4 +45,4 @@ My goal is to begin my career as a Data Analyst and continue developing my techn
 
 Email: Martinhleketani820@gmail.com
 
-LinkedIn: *(Add your LinkedIn profile URL)*
+LinkedIn: www.linkedin.com/in/martin-hleketani-31a078289
