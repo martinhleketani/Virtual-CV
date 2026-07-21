@@ -1,46 +1,34 @@
 // Smooth scrolling
 
-document.querySelectorAll("nav a").forEach(link=>{
+document.querySelectorAll("nav a").forEach(link => {
 
+    link.addEventListener("click", function (e) {
 
-link.addEventListener("click",function(e){
+        e.preventDefault();
 
-e.preventDefault();
+        document.querySelector(
+            this.getAttribute("href")
+        ).scrollIntoView({
 
+            behavior: "smooth"
 
-document.querySelector(
-this.getAttribute("href")
-).scrollIntoView({
+        });
 
-behavior:"smooth"
-
-});
-
-
-});
-
+    });
 
 });
 
 
+// Download CV
 
+const cvButton = document.querySelector('a[href="Martin_Chabalala_CV.pdf"]');
 
+if (cvButton) {
 
-// CV download message
+    cvButton.addEventListener("click", () => {
 
-const cv=document.querySelector(
-'a[href="Martin_Chabalala_CV.pdf"]'
-);
+        console.log("Downloading CV...");
 
-
-if(cv){
-
-
-cv.addEventListener("click",()=>{
-
-console.log("CV opened");
-
-});
-
+    });
 
 }
