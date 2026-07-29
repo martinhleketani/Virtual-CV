@@ -1,9 +1,28 @@
-// Profile picture upload
+// Profile picture upload with permanent browser storage
 
 const imageUpload = document.getElementById("imageUpload");
 
 const profilePreview = document.getElementById("profilePreview");
 
+
+// Load saved image when opening website
+
+window.onload = function(){
+
+const savedImage = localStorage.getItem("profileImage");
+
+
+if(savedImage){
+
+profilePreview.src = savedImage;
+
+}
+
+};
+
+
+
+// Upload new image
 
 imageUpload.addEventListener("change", function(){
 
@@ -24,7 +43,15 @@ reader.onload = function(e){
 profilePreview.src = e.target.result;
 
 
-}
+// Save image permanently
+
+localStorage.setItem(
+"profileImage",
+e.target.result
+);
+
+
+};
 
 
 
@@ -40,7 +67,7 @@ reader.readAsDataURL(file);
 
 
 
-// Smooth scrolling navigation
+// Smooth scrolling
 
 document.querySelectorAll("nav a").forEach(link=>{
 
@@ -79,14 +106,10 @@ const cvButton=document.querySelector(
 
 if(cvButton){
 
-
 cvButton.addEventListener("click",()=>{
-
 
 console.log("CV Download Started");
 
-
 });
-
 
 }
