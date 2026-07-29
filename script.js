@@ -1,4 +1,4 @@
-// Upload profile picture
+// Profile picture upload
 
 const imageUpload = document.getElementById("imageUpload");
 
@@ -39,7 +39,8 @@ reader.readAsDataURL(file);
 
 
 
-// Smooth scrolling
+
+// Smooth scrolling navigation
 
 document.querySelectorAll("nav a").forEach(link=>{
 
@@ -66,6 +67,9 @@ behavior:"smooth"
 
 
 
+
+
+
 // CV download message
 
 const cvButton=document.querySelector(
@@ -75,10 +79,14 @@ const cvButton=document.querySelector(
 
 if(cvButton){
 
+
 cvButton.addEventListener("click",()=>{
+
 
 console.log("CV Download Started");
 
+
 });
+
 
 }
