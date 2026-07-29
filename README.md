@@ -1,4 +1,4 @@
-# Martin Chabalala
+👨‍💻 Martin Chabalala
 
 Welcome to my GitHub profile.
 
@@ -6,12 +6,12 @@ I am a final-year Bachelor of Science in Information Technology student at North
 
 I am currently expanding my knowledge in Python, SQL, Microsoft Excel, Power BI, and Git/GitHub through self-study and online learning. My goal is to build practical skills and prepare for a career as a Data Analyst.
 
-## Education
+🎓 Education
 
-**North-West University**  
+North-West University**  
 Bachelor of Science in Information Technology (Final Year)
 
-## Technical Skills
+💻 Technical Skills
 
 - Python
 - SQL
@@ -24,7 +24,7 @@ Bachelor of Science in Information Technology (Final Year)
 - GitHub
 - Oracle SQL Developer
 
-## Current Focus
+🚀 Current Focus
 
 I am currently learning and improving my skills in:
 
@@ -37,11 +37,11 @@ I am currently learning and improving my skills in:
 
 As I complete my learning, I will upload projects to this GitHub profile to demonstrate my skills and progress.
 
-## Career Goal
+🎯 Career Goal
 
 My goal is to begin my career as a Data Analyst and continue developing my technical and analytical skills through practical experience and continuous learning.
 
-## Contact
+📞 Contact
 
 Email: Martinhleketani820@gmail.com
 
