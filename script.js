@@ -1,6 +1,4 @@
-// Smooth scrolling
-
-document.querySelectorAll("nav a").forEach(link => {
+document.querySelectorAll("nav a").forEach(link=>{
 
 
 link.addEventListener("click",function(e){
@@ -25,15 +23,9 @@ behavior:"smooth"
 
 
 
-
-
-// CV Download message
-
-
 const cvButton=document.querySelector(
 'a[href="Martin_Chabalala_CV.pdf"]'
 );
-
 
 
 if(cvButton){
@@ -42,7 +34,7 @@ if(cvButton){
 cvButton.addEventListener("click",()=>{
 
 
-console.log("CV Download Started");
+console.log("Downloading CV");
 
 
 });
