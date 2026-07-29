@@ -1,9 +1,50 @@
-// Smooth scrolling navigation
+// Upload profile picture
 
-document.querySelectorAll("nav a").forEach(link => {
+const imageUpload = document.getElementById("imageUpload");
+
+const profilePreview = document.getElementById("profilePreview");
 
 
-link.addEventListener("click", function(e){
+imageUpload.addEventListener("change", function(){
+
+
+const file = this.files[0];
+
+
+if(file){
+
+
+const reader = new FileReader();
+
+
+
+reader.onload = function(e){
+
+
+profilePreview.src = e.target.result;
+
+
+}
+
+
+
+reader.readAsDataURL(file);
+
+
+}
+
+
+});
+
+
+
+
+// Smooth scrolling
+
+document.querySelectorAll("nav a").forEach(link=>{
+
+
+link.addEventListener("click",function(e){
 
 
 e.preventDefault();
@@ -25,25 +66,19 @@ behavior:"smooth"
 
 
 
-
 // CV download message
 
-const cvButton = document.querySelector(
+const cvButton=document.querySelector(
 'a[href="Martin_Chabalala_CV.pdf"]'
 );
 
 
-
 if(cvButton){
-
 
 cvButton.addEventListener("click",()=>{
 
-
 console.log("CV Download Started");
 
-
 });
-
 
 }
