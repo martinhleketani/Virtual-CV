@@ -1,48 +1,69 @@
-// Smooth scrolling
+// =========================
+// Smooth Scrolling
+// =========================
 
-document.querySelectorAll("nav a").forEach(link=>{
+document.querySelectorAll("nav a").forEach(link => {
 
+    link.addEventListener("click", function (e) {
 
-link.addEventListener("click",function(e){
+        e.preventDefault();
 
+        const target = document.querySelector(this.getAttribute("href"));
 
-e.preventDefault();
+        if (target) {
+            target.scrollIntoView({
+                behavior: "smooth"
+            });
+        }
 
-
-document.querySelector(
-this.getAttribute("href")
-).scrollIntoView({
-
-behavior:"smooth"
-
-});
-
-
-});
-
+    });
 
 });
 
 
+// =========================
+// Download CV
+// =========================
 
+const cvButton = document.querySelector('a[href="Martin_Chabalala_CV.pdf"]');
 
-// CV download message
+if (cvButton) {
 
-const cvButton=document.querySelector(
-'a[href="Martin_Chabalala_CV.pdf"]'
-);
+    cvButton.addEventListener("click", function () {
 
+        console.log("Downloading CV...");
 
-if(cvButton){
-
-
-cvButton.addEventListener("click",()=>{
-
-
-console.log("CV Download Started");
-
-
-});
-
+    });
 
 }
+
+
+// =========================
+// Fade In Animation
+// =========================
+
+const sections = document.querySelectorAll("section");
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach(entry => {
+
+        if (entry.isIntersecting) {
+
+            entry.target.classList.add("show");
+
+        }
+
+    });
+
+}, {
+
+    threshold: 0.15
+
+});
+
+sections.forEach(section => {
+
+    observer.observe(section);
+
+});
