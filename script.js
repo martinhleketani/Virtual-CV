@@ -4,16 +4,18 @@
 
 document.querySelectorAll("nav a").forEach(link => {
 
-    link.addEventListener("click", function (e) {
+    link.addEventListener("click", function(e) {
 
         e.preventDefault();
 
         const target = document.querySelector(this.getAttribute("href"));
 
         if (target) {
+
             target.scrollIntoView({
                 behavior: "smooth"
             });
+
         }
 
     });
@@ -22,14 +24,14 @@ document.querySelectorAll("nav a").forEach(link => {
 
 
 // =========================
-// Download CV
+// Download CV Message
 // =========================
 
 const cvButton = document.querySelector('a[href="Martin_Chabalala_CV.pdf"]');
 
 if (cvButton) {
 
-    cvButton.addEventListener("click", function () {
+    cvButton.addEventListener("click", function() {
 
         console.log("Downloading CV...");
 
@@ -44,9 +46,9 @@ if (cvButton) {
 
 const sections = document.querySelectorAll("section");
 
-const observer = new IntersectionObserver((entries) => {
+const observer = new IntersectionObserver(function(entries) {
 
-    entries.forEach(entry => {
+    entries.forEach(function(entry) {
 
         if (entry.isIntersecting) {
 
@@ -58,12 +60,64 @@ const observer = new IntersectionObserver((entries) => {
 
 }, {
 
-    threshold: 0.15
+    threshold: 0.2
 
 });
 
-sections.forEach(section => {
+sections.forEach(function(section) {
 
     observer.observe(section);
 
 });
+
+
+// =========================
+// Active Navigation Link
+// =========================
+
+const navLinks = document.querySelectorAll("nav ul li a");
+
+window.addEventListener("scroll", function() {
+
+    let current = "";
+
+    sections.forEach(function(section) {
+
+        const sectionTop = section.offsetTop - 120;
+
+        if (pageYOffset >= sectionTop) {
+
+            current = section.getAttribute("id");
+
+        }
+
+    });
+
+    navLinks.forEach(function(link) {
+
+        link.classList.remove("active");
+
+        if (link.getAttribute("href") === "#" + current) {
+
+            link.classList.add("active");
+
+        }
+
+    });
+
+});
+
+
+// =========================
+// Current Year in Footer
+// =========================
+
+const footer = document.querySelector("footer p");
+
+if (footer) {
+
+    const year = new Date().getFullYear();
+
+    footer.innerHTML = `© ${year} Martin Chabalala | Aspiring Data Analyst`;
+
+}
