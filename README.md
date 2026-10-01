@@ -1,48 +1,98 @@
-👨‍💻 Martin Chabalala
+# 👨‍💻 Martin Chabalala
 
-Welcome to my GitHub profile.
+Final-stage **Bachelor of Science in Information Technology** student at **North-West University (NWU)** with practical experience developing full-stack applications, REST APIs, database-driven systems and business intelligence solutions.
 
-I am a final-year Bachelor of Science in Information Technology student at North-West University with a strong interest in Data Analytics, Business Intelligence, and Decision Support Systems.
+I enjoy building software that solves practical problems and working across application development, databases, APIs and data. My current projects include personal finance and budgeting software, employee work-tracking and business intelligence systems, and a student marketplace.
 
-I am currently expanding my knowledge in Python, SQL, Microsoft Excel, Power BI, and Git/GitHub through self-study and online learning. My goal is to build practical skills and prepare for a career as a Data Analyst.
+I am currently seeking **Graduate / Junior Software Developer opportunities** and am available for employment from **November 2026**.
 
-🎓 Education
+## 💻 Technical Skills
 
-North-West University**  
-Bachelor of Science in Information Technology (Final Year)
-
-💻 Technical Skills
-
+### Programming Languages
+- C#
+- Java
 - Python
 - SQL
-- Java
-- JavaScript
-- HTML5
-- CSS3
+
+### Software Development
+- .NET MAUI
+- ASP.NET Core Web API
+- XAML
+- Object-Oriented Programming
+- REST APIs
+
+### Databases
+- MySQL
+- SQL Server
+- Entity Framework Core
+- Relational Database Design
+
+### Data & Business Intelligence
 - Microsoft Excel
+- Data Cleaning
+- Data Analysis
+- Reporting
+- Business Intelligence
+
+### Tools
+- Visual Studio
+- Visual Studio Code
 - Git
 - GitHub
-- Oracle SQL Developer
+- BlueJ
 
-🚀 Current Focus
+## 🚀 Featured Projects
 
-I am currently learning and improving my skills in:
+### 💰 Martin SpendWise
+Personal finance, budgeting and grocery management application built using **C#, .NET MAUI, ASP.NET Core Web API, Entity Framework Core and MySQL**.
 
-- Python for Data Analysis
-- SQL
-- Microsoft Excel
-- Power BI
-- Git and GitHub
-- Data Visualization
+Key features include:
+- User registration and authentication
+- JWT authentication
+- Password recovery
+- Monthly budgeting
+- Transaction tracking
+- Spending reports and insights
+- Grocery-list management
+- Grocery budget checking
+- Retailer price-comparison infrastructure
 
-As I complete my learning, I will upload projects to this GitHub profile to demonstrate my skills and progress.
+### 📊 InsightFlow
+Employee work-tracking and business intelligence system designed for employees, administrators and management.
 
-🎯 Career Goal
+Key features include:
+- Employee work activity tracking
+- Department-based records
+- Business value tracking
+- Work status and impact tracking
+- Management reporting
+- Performance analytics
+- Trend analysis and forecasting
 
-My goal is to begin my career as a Data Analyst and continue developing my technical and analytical skills through practical experience and continuous learning.
+### 🛒 Campus Market
+Student-focused marketplace application for buying, selling and advertising products within a campus environment.
 
-📞 Contact
+Key features include:
+- User accounts
+- Product listings
+- Product categories
+- Product searching
+- Buyer marketplace functionality
+- Administrative functionality
 
-Email: Martinhleketani820@gmail.com
+## 🎓 Education
 
-LinkedIn: www.linkedin.com/in/martin-hleketani-31a078289
+**Bachelor of Science in Information Technology (NQF Level 7)**  
+North-West University (NWU)  
+Vanderbijlpark Campus  
+2023 – Present
+
+## 🎯 Career Goal
+
+My goal is to begin my professional career as a **Graduate / Junior Software Developer**, where I can apply my knowledge of software development, databases, APIs and problem solving to real-world systems while continuing to develop my technical skills and industry experience.
+
+## 📫 Contact
+
+📧 **Email:** [Martinhleketani820@gmail.com](mailto:Martinhleketani820@gmail.com)
+
+💼 **LinkedIn:** [linkedin.com/in/martin-hleketani-31a078289](https://www.linkedin.com/in/martin-hleketani-31a078289)
