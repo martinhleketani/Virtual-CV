@@ -1,19 +1,26 @@
 // =========================
-// Smooth Scrolling
+// Smooth Navigation
 // =========================
 
-document.querySelectorAll("nav a").forEach(link => {
+document.querySelectorAll('a[href^="#"]').forEach(link => {
 
-    link.addEventListener("click", function(e) {
+    link.addEventListener("click", function (event) {
 
-        e.preventDefault();
+        const targetId = this.getAttribute("href");
 
-        const target = document.querySelector(this.getAttribute("href"));
+        if (targetId === "#") {
+            return;
+        }
+
+        const target = document.querySelector(targetId);
 
         if (target) {
 
+            event.preventDefault();
+
             target.scrollIntoView({
-                behavior: "smooth"
+                behavior: "smooth",
+                block: "start"
             });
 
         }
@@ -24,16 +31,17 @@ document.querySelectorAll("nav a").forEach(link => {
 
 
 // =========================
-// Download CV Message
+// CV Download
 // =========================
 
-const cvButton = document.querySelector('a[href="Martin_Chabalala_CV.pdf"]');
+const cvButton =
+    document.querySelector('a[href="Martin_Chabalala_CV.pdf"]');
 
 if (cvButton) {
 
-    cvButton.addEventListener("click", function() {
+    cvButton.addEventListener("click", function () {
 
-        console.log("Downloading CV...");
+        console.log("Downloading Martin Chabalala CV");
 
     });
 
@@ -41,30 +49,36 @@ if (cvButton) {
 
 
 // =========================
-// Fade In Animation
+// Fade-In Sections
 // =========================
 
-const sections = document.querySelectorAll("section");
+const sections =
+    document.querySelectorAll("section:not(.hero)");
 
-const observer = new IntersectionObserver(function(entries) {
+const observer =
+    new IntersectionObserver(
 
-    entries.forEach(function(entry) {
+        function (entries) {
 
-        if (entry.isIntersecting) {
+            entries.forEach(function (entry) {
 
-            entry.target.classList.add("show");
+                if (entry.isIntersecting) {
 
+                    entry.target.classList.add("show");
+
+                }
+
+            });
+
+        },
+
+        {
+            threshold: 0.12
         }
 
-    });
+    );
 
-}, {
-
-    threshold: 0.2
-
-});
-
-sections.forEach(function(section) {
+sections.forEach(function (section) {
 
     observer.observe(section);
 
@@ -75,29 +89,38 @@ sections.forEach(function(section) {
 // Active Navigation Link
 // =========================
 
-const navLinks = document.querySelectorAll("nav ul li a");
+const navLinks =
+    document.querySelectorAll("nav ul li a");
 
-window.addEventListener("scroll", function() {
+window.addEventListener("scroll", function () {
 
-    let current = "";
+    let currentSection = "home";
 
-    sections.forEach(function(section) {
+    const pageSections =
+        document.querySelectorAll("header[id], section[id]");
 
-        const sectionTop = section.offsetTop - 120;
+    pageSections.forEach(function (section) {
 
-        if (pageYOffset >= sectionTop) {
+        const sectionTop =
+            section.offsetTop - 180;
 
-            current = section.getAttribute("id");
+        if (window.scrollY >= sectionTop) {
+
+            currentSection =
+                section.getAttribute("id");
 
         }
 
     });
 
-    navLinks.forEach(function(link) {
+    navLinks.forEach(function (link) {
 
         link.classList.remove("active");
 
-        if (link.getAttribute("href") === "#" + current) {
+        if (
+            link.getAttribute("href") ===
+            "#" + currentSection
+        ) {
 
             link.classList.add("active");
 
@@ -109,15 +132,18 @@ window.addEventListener("scroll", function() {
 
 
 // =========================
-// Current Year in Footer
+// Current Year Footer
 // =========================
 
-const footer = document.querySelector("footer p");
+const footer =
+    document.getElementById("footer-text");
 
 if (footer) {
 
-    const year = new Date().getFullYear();
+    const currentYear =
+        new Date().getFullYear();
 
-    footer.innerHTML = `© ${year} Martin Chabalala | Aspiring Data Analyst`;
+    footer.textContent =
+        `© ${currentYear} Martin Chabalala | Graduate / Junior Software Developer`;
 
 }
